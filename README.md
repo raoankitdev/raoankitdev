@@ -28,6 +28,6 @@
 
 <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=raoankitdev&show_icons=true&locale=en&layout=compact" alt="raoankitdev" /></p>
 
-![Programming Gym's GitHub Stats](https:// github-readme-stats.vercel.app/api? username-raoankitdev=starsScount_private-true& show_icons-true&theme=algolia&border_radius=20)
+<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=raoankitdev&show_icons=true&locale=en" alt="raoankitdev" /></p>
 
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=raoankitdev&" alt="raoankitdev" /></p>
