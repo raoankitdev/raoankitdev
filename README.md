@@ -7,31 +7,40 @@ How to use:
 4) Open this file in VS Code and use "Open Preview" to see the design.
 -->
 
-<!-- Simple header: text left, photo right -->
-<p>
-  <img src="./assets/8447720a230eca26e53a6244c20afd22.jpg" alt="Ankit Yadav" width="190" align="right" />
-</p>
+<!-- Header banner (change text via the `text` param). Alternatives: type=cylinder/rect/wave -->
+![header](https://capsule-render.vercel.app/api?type=waving&color=0:00c6ff,100:0072ff&height=220&section=header&text=Hi,%20I'm%20Ankit%20Yadav%20👋&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=35)
 
-<h1>Hi, I’m Ankit Yadav</h1>
-<h3>Building Software Before GPUs Steal My Job</h3>
-
-<!-- Quick badges -->
-<p align="left">
+<!-- Quick badges (update links) -->
+<p align="center">
   <a href="https://ankityadav.tech" target="_blank"><img alt="Website" src="https://img.shields.io/badge/Portfolio-18181B?style=for-the-badge&logo=About.me&logoColor=white" /></a>
   <a href="https://www.linkedin.com/in/ankityadav0709/" target="_blank"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
 </p>
+
+<div align="center">
+
+I’m a Full‑Stack Developer who loves building clean UIs, robust APIs, and delightful developer experiences.
+
+</div>
 
 ---
 
 ## ✨ About me
 
-Building Software Before GPUs Steal My Job
+Full‑Stack dev — morphing ideas into fast, delightful software.
 
 ---
 
 ## 🧰 Tech stack
 
-`React` `Next.js` `Node.js` `Express.js` `MongoDB` `Python` `PyTorch` `C++` `Swift` `JavaScript`
+<!-- Use https://skillicons.dev to quickly visualize your tech. Replace or reorder icons below. -->
+<p>
+  <img src="https://skillicons.dev/icons?i=ts,js,react,nextjs,vue,svelte,astro,nodejs,python,go,java,swift,kotlin,graphql,deno,express,fastapi,flask,tailwind,styledcomponents,sass,figma&perline=12" />
+</p>
+<p>
+  <img src="https://skillicons.dev/icons?i=aws,gcp,azure,docker,kubernetes,terraform,nginx,linux,postgres,mysql,mongodb,redis,sqlite,prisma,supabase,rabbitmq,elasticsearch,git,github,gitlab&perline=12" />
+</p>
+
+<!-- Swap out for what you use most. Keep it focused and impressive. -->
 
 ---
 
@@ -45,6 +54,7 @@ Building Software Before GPUs Steal My Job
 
 ## 📊 GitHub stats
 
+<!-- Tip: Replace <YOUR_USERNAME> everywhere. If you prefer minimalism, pick only one card. Themes: dark, radical, transparent, etc. -->
 <p>
   <img height="165" alt="GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=raoankitdev&show_icons=true&theme=transparent&hide_border=true&rank_icon=github" />
   <img height="165" alt="Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=raoankitdev&layout=compact&theme=transparent&hide_border=true" />
@@ -85,5 +95,12 @@ Updates and writings live on my portfolio.
 <!--
 Power tips:
 - Keep it concise; lead with outcomes and quality.
+- Showcase 2–6 best projects; link to a clean README and demo.
+- Prefer crisp visuals (GIFs under 5 MB) to show UX or performance.
 - Update quarterly; stale readmes hurt more than they help.
+- Want automation? Look into these:
+  • lowlighter/metrics for dynamic profile sections
+  • gautamkrishnar/blog-post-workflow to auto‑pull latest posts
+  • anuraghazra/github-readme-stats for cards
+  • DenverCoder1/github-readme-streak-stats for streaks
 -->
