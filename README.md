@@ -16,17 +16,13 @@ How to use:
   <a href="https://www.linkedin.com/in/ankityadav0709/" target="_blank"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
 </p>
 
-<div align="center">
-
-I’m a Full‑Stack Developer who loves building clean UIs, robust APIs, and delightful developer experiences.
-
-</div>
+<!-- Removed extra center description per request -->
 
 ---
 
 ## ✨ About me
 
-Full‑Stack dev — morphing ideas into fast, delightful software.
+Building Software Before GPUs Steal My Job
 
 ---
 
