@@ -8,7 +8,7 @@ How to use:
 -->
 
 <!-- Header banner (change text via the `text` param). Alternatives: type=cylinder/rect/wave -->
-![header](./assets/space-header.svg)
+![header](https://raw.githubusercontent.com/raoankitdev/raoankitdev/main/assets/space-header.svg)
 
 <!-- Quick badges (update links) -->
 <p align="center">
