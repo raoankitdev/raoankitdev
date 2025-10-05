@@ -7,16 +7,19 @@ How to use:
 4) Open this file in VS Code and use "Open Preview" to see the design.
 -->
 
-<!-- Header banner (change text via the `text` param). Alternatives: type=cylinder/rect/wave -->
-![header](https://raw.githubusercontent.com/raoankitdev/raoankitdev/main/assets/space-header.svg)
+<!-- Simple header: text left, photo right -->
+<p>
+  <img src="./assets/8447720a230eca26e53a6244c20afd22.jpg" alt="Ankit Yadav" width="190" align="right" />
+</p>
 
-<!-- Quick badges (update links) -->
-<p align="center">
+<h1>Hi, I’m Ankit Yadav</h1>
+<h3>Building Software Before GPUs Steal My Job</h3>
+
+<!-- Quick badges -->
+<p align="left">
   <a href="https://ankityadav.tech" target="_blank"><img alt="Website" src="https://img.shields.io/badge/Portfolio-18181B?style=for-the-badge&logo=About.me&logoColor=white" /></a>
   <a href="https://www.linkedin.com/in/ankityadav0709/" target="_blank"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
 </p>
-
-<!-- Removed extra center description per request -->
 
 ---
 
@@ -28,21 +31,7 @@ Building Software Before GPUs Steal My Job
 
 ## 🧰 Tech stack
 
-<p align="left">
-  <kbd>React</kbd>
-  <kbd>Next.js</kbd>
-  <kbd>JavaScript</kbd>
-  <kbd>Node.js</kbd>
-  <kbd>Express.js</kbd>
-  <kbd>MongoDB</kbd>
-  <kbd>Python</kbd>
-  <kbd>PyTorch</kbd>
-  <kbd>C++</kbd>
-  <kbd>Swift</kbd>
-  
-</p>
-
-<!-- Text-only tags (no images), reordered for a clean flow. -->
+`React` `Next.js` `Node.js` `Express.js` `MongoDB` `Python` `PyTorch` `C++` `Swift` `JavaScript`
 
 ---
 
@@ -56,7 +45,6 @@ Building Software Before GPUs Steal My Job
 
 ## 📊 GitHub stats
 
-<!-- Tip: Replace <YOUR_USERNAME> everywhere. If you prefer minimalism, pick only one card. Themes: dark, radical, transparent, etc. -->
 <p>
   <img height="165" alt="GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=raoankitdev&show_icons=true&theme=transparent&hide_border=true&rank_icon=github" />
   <img height="165" alt="Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=raoankitdev&layout=compact&theme=transparent&hide_border=true" />
@@ -97,12 +85,5 @@ Updates and writings live on my portfolio.
 <!--
 Power tips:
 - Keep it concise; lead with outcomes and quality.
-- Showcase 2–6 best projects; link to a clean README and demo.
-- Prefer crisp visuals (GIFs under 5 MB) to show UX or performance.
 - Update quarterly; stale readmes hurt more than they help.
-- Want automation? Look into these:
-  • lowlighter/metrics for dynamic profile sections
-  • gautamkrishnar/blog-post-workflow to auto‑pull latest posts
-  • anuraghazra/github-readme-stats for cards
-  • DenverCoder1/github-readme-streak-stats for streaks
 -->
