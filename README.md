@@ -8,7 +8,7 @@ How to use:
 -->
 
 <!-- Header banner (change text via the `text` param). Alternatives: type=cylinder/rect/wave -->
-![header](https://capsule-render.vercel.app/api?type=waving&color=0:00c6ff,100:0072ff&height=220&section=header&text=Hi,%20I'm%20Ankit%20Yadav%20👋&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=35)
+![header](./assets/space-header.svg)
 
 <!-- Quick badges (update links) -->
 <p align="center">
@@ -32,15 +32,21 @@ Full‑Stack dev — morphing ideas into fast, delightful software.
 
 ## 🧰 Tech stack
 
-<!-- Use https://skillicons.dev to quickly visualize your tech. Replace or reorder icons below. -->
-<p>
-  <img src="https://skillicons.dev/icons?i=ts,js,react,nextjs,vue,svelte,astro,nodejs,python,go,java,swift,kotlin,graphql,deno,express,fastapi,flask,tailwind,styledcomponents,sass,figma&perline=12" />
-</p>
-<p>
-  <img src="https://skillicons.dev/icons?i=aws,gcp,azure,docker,kubernetes,terraform,nginx,linux,postgres,mysql,mongodb,redis,sqlite,prisma,supabase,rabbitmq,elasticsearch,git,github,gitlab&perline=12" />
+<p align="left">
+  <kbd>React</kbd>
+  <kbd>Next.js</kbd>
+  <kbd>JavaScript</kbd>
+  <kbd>Node.js</kbd>
+  <kbd>Express.js</kbd>
+  <kbd>MongoDB</kbd>
+  <kbd>Python</kbd>
+  <kbd>PyTorch</kbd>
+  <kbd>C++</kbd>
+  <kbd>Swift</kbd>
+  
 </p>
 
-<!-- Swap out for what you use most. Keep it focused and impressive. -->
+<!-- Text-only tags (no images), reordered for a clean flow. -->
 
 ---
 
