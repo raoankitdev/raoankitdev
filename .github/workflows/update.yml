@@ -1,23 +1,23 @@
 name: Update Weather
-permissions:
-  contents: write
 on:
   schedule:
-    - cron: '0 * * * *' # Updates hourly
-  workflow_dispatch:   # Allows manual updates
+    - cron: '0 * * * *'
+  workflow_dispatch:
 jobs:
   update:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
-      - name: Run Update Script
+      - name: Update Script
         run: node build-svg.js
         env:
           WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
-      - name: Commit and Push
+      - name: Push Changes
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add .
-          git commit -m "Update weather SVG" || exit 0
+          git add chat.svg
+          git commit -m "Update weather animation" || exit 0
           git push
