@@ -1,21 +1,24 @@
-<svg width="250" height="70" viewBox="0 0 250 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="300" height="80" viewBox="0 0 300 80" fill="none" xmlns="http://www.w3.org/2000/svg">
   <style>
-    .text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; fill: white; font-weight: 600; }
-    .temp { font-size: 20px; }
-    .city { font-size: 12px; opacity: 0.7; }
+    .text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: white; }
+    .temp { font-size: 24px; font-weight: 800; }
+    .condition { font-size: 14px; opacity: 0.8; font-weight: 400; }
     
-    /* This makes it smooth like Jason's */
+    /* The smooth pulse animation */
     @keyframes pulse {
-      0% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.8; transform: scale(1.02); }
-      100% { opacity: 1; transform: scale(1); }
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.03); opacity: 0.9; }
+      100% { transform: scale(1); opacity: 1; }
     }
-    .container { animation: pulse 3s ease-in-out infinite; transform-origin: center; }
+    .main-bubble { 
+      animation: pulse 4s ease-in-out infinite; 
+      transform-origin: center; 
+    }
   </style>
 
-  <g class="container">
-    <rect width="250" height="70" rx="15" fill="#24292e"/>
-    <text x="20" y="35" class="text temp">Delhi: {{TEMP}}°C</text>
-    <text x="20" y="55" class="text city">{{CONDITION}}</text>
+  <g class="main-bubble">
+    <rect width="300" height="80" rx="20" fill="#0d1117" stroke="#30363d" stroke-width="2"/>
+    <text x="25" y="40" class="text temp">Delhi: {{TEMP}}°C</text>
+    <text x="25" y="60" class="text condition">{{CONDITION}}</text>
   </g>
 </svg>
