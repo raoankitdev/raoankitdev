@@ -54,7 +54,7 @@
   <g transform="translate(20, 120)">
     <g class="msg-3">
       <rect width="310" height="36" rx="18" class="bubble-gray"/>
-      <text x="18" y="23" class="text"><tspan class="bold">16°C</tspan> and <tspan class="bold">🌫️ haze</tspan> today.</text>
+      <text x="18" y="23" class="text"><tspan class="bold">17°C</tspan> and <tspan class="bold">🌫️ haze</tspan> today.</text>
     </g>
   </g>
 </svg>
