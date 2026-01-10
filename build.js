@@ -1,34 +1,57 @@
 const fs = require('fs');
 
 async function updateWeather() {
+  const apiKey = process.env.WEATHER_API_KEY;
+  const city = "Delhi"; 
+  
   try {
-    const apiKey = process.env.WEATHER_API_KEY;
-    if (!apiKey) throw new Error("WEATHER_API_KEY is missing in GitHub Secrets!");
-
-    const city = "Delhi"; 
+    // 1. Fetch Weather
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
+    if (!response.ok) throw new Error("Weather API failed");
     
-    if (!response.ok) throw new Error(`Weather API Error: ${response.statusText}`);
-
     const data = await response.json();
     const temp = Math.round(data.main.temp);
     const main = data.weather[0].main;
     const icons = { Clear: "☀️", Clouds: "☁️", Rain: "🌧️", Thunderstorm: "⚡", Snow: "❄️", Mist: "🌫️" };
     const icon = icons[main] || "☁️";
 
-    if (!fs.existsSync('chat.template.svg')) throw new Error("chat.template.svg not found!");
+    // 2. Calculate Greeting (IST Time)
+    const date = new Date();
+    const options = { timeZone: 'Asia/Kolkata', hour: 'numeric', hour12: false };
+    const hour = parseInt(date.toLocaleString('en-US', options));
+    
+    let greeting = "Have a good day!";
+    if (hour >= 5 && hour < 12) greeting = "Have a good morning! ☀️";
+    else if (hour >= 12 && hour < 17) greeting = "Have a good afternoon! 🌤️";
+    else if (hour >= 17 && hour < 21) greeting = "Have a good evening! 🌇";
+    else greeting = "Have a good night! 🌙";
 
+    // 3. Embed Image (Base64 Injection)
+    let imageBase64 = "";
+    if (fs.existsSync('project.jpg')) {
+      const imgBuffer = fs.readFileSync('project.jpg');
+      // Convert image to a string so it can live inside the SVG
+      imageBase64 = `data:image/jpeg;base64,${imgBuffer.toString('base64')}`;
+    } else {
+      console.warn("Warning: project.jpg not found. Bubble will be empty.");
+    }
+
+    // 4. Update File
+    if (!fs.existsSync('chat.template.svg')) throw new Error("Template not found");
+    
     let template = fs.readFileSync('chat.template.svg', 'utf-8');
     let newSvg = template
       .replace('{{TEMP}}', temp)
-      .replace('{{CONDITION}}', `${icon} ${main.toLowerCase()}`);
+      .replace('{{CONDITION}}', `${icon} ${main.toLowerCase()}`)
+      .replace('{{GREETING}}', greeting)
+      .replace('{{PROJECT_IMG}}', imageBase64);
 
     fs.writeFileSync('chat.svg', newSvg);
     console.log("Success: chat.svg updated.");
 
   } catch (error) {
-    console.error("FAILED:", error.message);
-    process.exit(1); // This turns the cross RED if something is wrong
+    console.error("Failed:", error);
+    process.exit(1);
   }
 }
 
