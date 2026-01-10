@@ -1,4 +1,6 @@
 name: Update Weather
+permissions:
+  contents: write
 on:
   schedule:
     - cron: '0 * * * *' # Updates hourly
