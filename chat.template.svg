@@ -22,8 +22,8 @@
     .msg-3 { animation: slideUp 0.5s ease both 4.0s; } 
     .msg-4 { animation: slideUp 0.5s ease both 5.5s; } 
     .msg-5 { animation: slideUp 0.5s ease both 7.0s; } 
-    .msg-6 { animation: slideUp 0.5s ease both 8.5s; } /* New Link Bubble */
-    .msg-7 { animation: slideUp 0.5s ease both 10.0s; } /* Greeting (Shifted) */
+    .msg-6 { animation: slideUp 0.5s ease both 8.5s; } 
+    .msg-7 { animation: slideUp 0.5s ease both 10.0s; } 
 
     @keyframes pulse { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
     @keyframes fadeOut { to { opacity: 0; } }
@@ -61,7 +61,7 @@
     <rect width="580" height="80" rx="24" class="bubble"/>
     <text x="24" y="30" class="text">
       <tspan x="24" dy="0">My favorite project is StashMyMusic. It takes an Instagram</tspan>
-      <tspan x="24" dy="28">reel link and adds the song to Spotify. Below is the illustration:</tspan>
+      <tspan x="24" dy="28">reel link and adds the song to Spotify. Below is the demonstration:</tspan>
     </text>
   </g></g>
 
