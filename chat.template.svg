@@ -42,7 +42,7 @@
   <g transform="translate(20, 20)"><g class="msg-1"><rect width="260" height="48" rx="24" class="bubble"/><text x="24" y="30" class="text">Hi, I'm Ankit, 22, Engineer.</text></g></g>
 
   <g transform="translate(20, 85)"><g class="msg-2">
-    <rect width="580" height="80" rx="24" class="bubble"/>
+    <rect width="420" height="80" rx="24" class="bubble"/>
     <text x="24" y="30" class="text">
       <tspan x="24" dy="0">I live in Delhi, where it's supposed to be</tspan>
       <tspan x="24" dy="28">{{TEMP}}°C and {{CONDITION}} today.</tspan>
@@ -50,7 +50,7 @@
   </g></g>
 
   <g transform="translate(20, 185)"><g class="msg-3">
-    <rect width="580" height="80" rx="24" class="bubble"/>
+    <rect width="490" height="80" rx="24" class="bubble"/>
     <text x="24" y="30" class="text">
       <tspan x="24" dy="0">I love building full-stack apps and AI agents that</tspan>
       <tspan x="24" dy="28">actually get stuff done and can scale.</tspan>
@@ -58,7 +58,7 @@
   </g></g>
 
   <g transform="translate(20, 285)"><g class="msg-4">
-    <rect width="580" height="80" rx="24" class="bubble"/>
+    <rect width="600" height="80" rx="24" class="bubble"/>
     <text x="24" y="30" class="text">
       <tspan x="24" dy="0">My favorite project is StashMyMusic. It takes an Instagram</tspan>
       <tspan x="24" dy="28">reel link and adds the song to Spotify. Below is the demonstration:</tspan>
@@ -74,12 +74,12 @@
 
   <g transform="translate(20, 725)"><g class="msg-6">
     <a href="https://x.com/ankit_ay07" target="_blank">
-      <rect width="580" height="48" rx="24" class="bubble"/>
+      <rect width="480" height="48" rx="24" class="bubble"/>
       <text x="24" y="30" class="text">
         connect with me on x: <tspan class="link">https://x.com/ankit_ay07</tspan>
       </text>
     </a>
   </g></g>
 
-  <g transform="translate(20, 790)"><g class="msg-7"><rect width="360" height="48" rx="24" class="bubble"/><text x="24" y="30" class="text">{{GREETING}}</text></g></g>
+  <g transform="translate(20, 790)"><g class="msg-7"><rect width="320" height="48" rx="24" class="bubble"/><text x="24" y="30" class="text">{{GREETING}}</text></g></g>
 </svg>
