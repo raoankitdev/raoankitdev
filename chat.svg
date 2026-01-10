@@ -53,7 +53,7 @@
 
   <g transform="translate(20, 75)"><g class="msg-2">
     <rect width="520" height="40" rx="20" class="bubble"/>
-    <text x="20" y="26" class="text">I live in Delhi, where it's <tspan class="bold">14°C</tspan> and <tspan class="bold">☁️ haze</tspan> today.</text>
+    <text x="20" y="26" class="text">I live in Delhi, where it's <tspan class="bold">13°C</tspan> and <tspan class="bold">☁️ haze</tspan> today.</text>
   </g></g>
 
   <g transform="translate(20, 130)"><g class="msg-3">
