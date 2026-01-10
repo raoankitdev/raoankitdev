@@ -1,24 +1,29 @@
-<svg width="300" height="80" viewBox="0 0 300 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="450" height="150" viewBox="0 0 450 150" fill="none" xmlns="http://www.w3.org/2000/svg">
   <style>
-    .text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; fill: white; }
-    .temp { font-size: 24px; font-weight: 800; }
-    .condition { font-size: 14px; opacity: 0.8; font-weight: 400; }
-    
-    /* The smooth pulse animation */
-    @keyframes pulse {
-      0% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.03); opacity: 0.9; }
-      100% { transform: scale(1); opacity: 1; }
+    .text { 
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; 
+      fill: #adbac7; font-size: 15px; opacity: 0;
     }
-    .main-bubble { 
-      animation: pulse 4s ease-in-out infinite; 
-      transform-origin: center; 
-    }
+    .bold { font-weight: 600; fill: #ffffff; }
+
+    /* Staggered Line Animations */
+    .line1 { animation: fadeIn 0.5s ease forwards 0.5s, typing 2s steps(30) forwards 0.5s; }
+    .line2 { animation: fadeIn 0.5s ease forwards 3.0s, typing 2s steps(30) forwards 3.0s; }
+    .line3 { animation: fadeIn 0.5s ease forwards 5.5s; }
+
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes typing { from { width: 0; } to { width: 100%; } }
   </style>
 
-  <g class="main-bubble">
-    <rect width="300" height="80" rx="20" fill="#0d1117" stroke="#30363d" stroke-width="2"/>
-    <text x="25" y="40" class="text temp">Delhi: {{TEMP}}°C</text>
-    <text x="25" y="60" class="text condition">{{CONDITION}}</text>
+  <path d="M20 0C8.95431 0 0 8.95431 0 20V110C0 121.046 8.95431 130 20 130H40L50 140L60 130H430C441.046 130 450 121.046 450 110V20C450 8.95431 441.046 0 430 0H20Z" fill="#22272e"/>
+  
+  <g class="line1">
+    <text x="25" y="35" class="text">Hi, I'm Ankit.</text>
+  </g>
+  <g class="line2">
+    <text x="25" y="65" class="text">I live in Delhi, where it's <span class="bold">{{TEMP}}°C</span> today.</text>
+  </g>
+  <g class="line3">
+    <text x="25" y="95" class="text bold">It's currently {{CONDITION}}! ✨</text>
   </g>
 </svg>
