@@ -12,70 +12,66 @@
     .link { fill: #0969da; text-decoration: none; }
     .link:hover { text-decoration: underline; }
 
-    /* 2. INITIAL STATES (Crucial to prevent glitches) */
-    .layer-dots { opacity: 0; }
-    .layer-msg  { opacity: 0; }
-
-    /* 3. ANIMATION KEYFRAMES */
+    /* 2. ANIMATIONS (Pure Opacity - No Sliding) */
     @keyframes pulse { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
     
-    /* Dots: Fade In -> Wait -> Fade Out */
-    @keyframes showDots { 
+    /* Dots: Appear -> Wait -> Disappear */
+    @keyframes cycleDots { 
       0% { opacity: 0; } 
       10% { opacity: 1; } 
       90% { opacity: 1; } 
       100% { opacity: 0; } 
     }
     
-    /* Message: Slide Up & Stay Visible */
-    @keyframes showMsg { 
-      0% { opacity: 0; transform: translateY(10px); } 
-      100% { opacity: 1; transform: translateY(0); } 
+    /* Message: Appear and Stay */
+    @keyframes revealMsg { 
+      0% { opacity: 0; } 
+      100% { opacity: 1; } 
     }
 
-    /* 4. THE TIMELINE (Sequential Delays) */
+    /* 3. THE TIMELINE */
     
     /* MSG 1: Bio */
-    .d1 { animation: showDots 1.0s ease forwards 0.0s; }
-    .m1 { animation: showMsg  0.5s ease forwards 1.0s; }
+    .d1 { animation: cycleDots 1.0s ease forwards 0.0s; }
+    .m1 { animation: revealMsg 0.1s ease forwards 1.0s; }
 
     /* MSG 2: Weather */
-    .d2 { animation: showDots 1.0s ease forwards 1.5s; }
-    .m2 { animation: showMsg  0.5s ease forwards 2.5s; }
+    .d2 { animation: cycleDots 1.0s ease forwards 1.2s; }
+    .m2 { animation: revealMsg 0.1s ease forwards 2.2s; }
 
     /* MSG 3: Full Stack */
-    .d3 { animation: showDots 1.0s ease forwards 3.0s; }
-    .m3 { animation: showMsg  0.5s ease forwards 4.0s; }
+    .d3 { animation: cycleDots 1.0s ease forwards 2.4s; }
+    .m3 { animation: revealMsg 0.1s ease forwards 3.4s; }
 
     /* MSG 4: Project Text */
-    .d4 { animation: showDots 1.0s ease forwards 4.5s; }
-    .m4 { animation: showMsg  0.5s ease forwards 5.5s; }
+    .d4 { animation: cycleDots 1.0s ease forwards 3.6s; }
+    .m4 { animation: revealMsg 0.1s ease forwards 4.6s; }
 
     /* MSG 5: Image */
-    .d5 { animation: showDots 1.0s ease forwards 6.0s; }
-    .m5 { animation: showMsg  0.5s ease forwards 7.0s; }
+    .d5 { animation: cycleDots 1.0s ease forwards 4.8s; }
+    .m5 { animation: revealMsg 0.1s ease forwards 5.8s; }
 
     /* MSG 6: X Link */
-    .d6 { animation: showDots 1.0s ease forwards 7.5s; }
-    .m6 { animation: showMsg  0.5s ease forwards 8.5s; }
+    .d6 { animation: cycleDots 1.0s ease forwards 6.0s; }
+    .m6 { animation: revealMsg 0.1s ease forwards 7.0s; }
 
     /* MSG 7: Greeting */
-    .d7 { animation: showDots 1.0s ease forwards 9.0s; }
-    .m7 { animation: showMsg  0.5s ease forwards 10.0s; }
+    .d7 { animation: cycleDots 1.0s ease forwards 7.2s; }
+    .m7 { animation: revealMsg 0.1s ease forwards 8.2s; }
 
-    /* Internal Dot Staggering */
+    /* Stagger dots */
     .dot:nth-child(2) { animation-delay: 0.2s; }
     .dot:nth-child(3) { animation-delay: 0.4s; }
   </style>
 
   <g transform="translate(20, 20)">
-    <g class="layer-dots d1"><rect width="80" height="44" rx="22" class="bubble"/><circle cx="24" cy="22" r="5" class="dot"/><circle cx="40" cy="22" r="5" class="dot"/><circle cx="56" cy="22" r="5" class="dot"/></g>
-    <g class="layer-msg m1"><rect width="260" height="48" rx="24" class="bubble"/><text x="24" y="30" class="text">Hi, I'm Ankit, 22, Engineer.</text></g>
+    <g class="d1" opacity="0"><rect width="80" height="44" rx="22" class="bubble"/><circle cx="24" cy="22" r="5" class="dot"/><circle cx="40" cy="22" r="5" class="dot"/><circle cx="56" cy="22" r="5" class="dot"/></g>
+    <g class="m1" opacity="0"><rect width="260" height="48" rx="24" class="bubble"/><text x="24" y="30" class="text">Hi, I'm Ankit, 22, Engineer.</text></g>
   </g>
 
   <g transform="translate(20, 85)">
-    <g class="layer-dots d2"><rect width="80" height="44" rx="22" class="bubble"/><circle cx="24" cy="22" r="5" class="dot"/><circle cx="40" cy="22" r="5" class="dot"/><circle cx="56" cy="22" r="5" class="dot"/></g>
-    <g class="layer-msg m2">
+    <g class="d2" opacity="0"><rect width="80" height="44" rx="22" class="bubble"/><circle cx="24" cy="22" r="5" class="dot"/><circle cx="40" cy="22" r="5" class="dot"/><circle cx="56" cy="22" r="5" class="dot"/></g>
+    <g class="m2" opacity="0">
       <rect width="420" height="80" rx="24" class="bubble"/>
       <text x="24" y="30" class="text">
         <tspan x="24" dy="0">I live in Delhi, where it's supposed to be</tspan>
@@ -85,8 +81,8 @@
   </g>
 
   <g transform="translate(20, 185)">
-    <g class="layer-dots d3"><rect width="80" height="44" rx="22" class="bubble"/><circle cx="24" cy="22" r="5" class="dot"/><circle cx="40" cy="22" r="5" class="dot"/><circle cx="56" cy="22" r="5" class="dot"/></g>
-    <g class="layer-msg m3">
+    <g class="d3" opacity="0"><rect width="80" height="44" rx="22" class="bubble"/><circle cx="24" cy="22" r="5" class="dot"/><circle cx="40" cy="22" r="5" class="dot"/><circle cx="56" cy="22" r="5" class="dot"/></g>
+    <g class="m3" opacity="0">
       <rect width="490" height="80" rx="24" class="bubble"/>
       <text x="24" y="30" class="text">
         <tspan x="24" dy="0">I love building full-stack apps and AI agents that</tspan>
@@ -96,8 +92,8 @@
   </g>
 
   <g transform="translate(20, 285)">
-    <g class="layer-dots d4"><rect width="80" height="44" rx="22" class="bubble"/><circle cx="24" cy="22" r="5" class="dot"/><circle cx="40" cy="22" r="5" class="dot"/><circle cx="56" cy="22" r="5" class="dot"/></g>
-    <g class="layer-msg m4">
+    <g class="d4" opacity="0"><rect width="80" height="44" rx="22" class="bubble"/><circle cx="24" cy="22" r="5" class="dot"/><circle cx="40" cy="22" r="5" class="dot"/><circle cx="56" cy="22" r="5" class="dot"/></g>
+    <g class="m4" opacity="0">
       <rect width="600" height="80" rx="24" class="bubble"/>
       <text x="24" y="30" class="text">
         <tspan x="24" dy="0">My favorite project is StashMyMusic. It takes an Instagram</tspan>
@@ -107,8 +103,8 @@
   </g>
 
   <g transform="translate(20, 385)">
-    <g class="layer-dots d5"><rect width="80" height="44" rx="22" class="bubble"/><circle cx="24" cy="22" r="5" class="dot"/><circle cx="40" cy="22" r="5" class="dot"/><circle cx="56" cy="22" r="5" class="dot"/></g>
-    <g class="layer-msg m5">
+    <g class="d5" opacity="0"><rect width="80" height="44" rx="22" class="bubble"/><circle cx="24" cy="22" r="5" class="dot"/><circle cx="40" cy="22" r="5" class="dot"/><circle cx="56" cy="22" r="5" class="dot"/></g>
+    <g class="m5" opacity="0">
       <svg x="0" y="0" width="580" height="320" viewBox="0 0 580 320">
           <clipPath id="clip"><rect width="580" height="320" rx="12"/></clipPath>
           <image href="{{PROJECT_IMG}}" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" clip-path="url(#clip)"/>
@@ -117,8 +113,8 @@
   </g>
 
   <g transform="translate(20, 725)">
-    <g class="layer-dots d6"><rect width="80" height="44" rx="22" class="bubble"/><circle cx="24" cy="22" r="5" class="dot"/><circle cx="40" cy="22" r="5" class="dot"/><circle cx="56" cy="22" r="5" class="dot"/></g>
-    <g class="layer-msg m6">
+    <g class="d6" opacity="0"><rect width="80" height="44" rx="22" class="bubble"/><circle cx="24" cy="22" r="5" class="dot"/><circle cx="40" cy="22" r="5" class="dot"/><circle cx="56" cy="22" r="5" class="dot"/></g>
+    <g class="m6" opacity="0">
       <a href="https://x.com/ankit_ay07" target="_blank">
         <rect width="480" height="48" rx="24" class="bubble"/>
         <text x="24" y="30" class="text">
@@ -129,8 +125,8 @@
   </g>
 
   <g transform="translate(20, 790)">
-    <g class="layer-dots d7"><rect width="80" height="44" rx="22" class="bubble"/><circle cx="24" cy="22" r="5" class="dot"/><circle cx="40" cy="22" r="5" class="dot"/><circle cx="56" cy="22" r="5" class="dot"/></g>
-    <g class="layer-msg m7">
+    <g class="d7" opacity="0"><rect width="80" height="44" rx="22" class="bubble"/><circle cx="24" cy="22" r="5" class="dot"/><circle cx="40" cy="22" r="5" class="dot"/><circle cx="56" cy="22" r="5" class="dot"/></g>
+    <g class="m7" opacity="0">
       <rect width="320" height="48" rx="24" class="bubble"/>
       <text x="24" y="30" class="text">{{GREETING}}</text>
     </g>
