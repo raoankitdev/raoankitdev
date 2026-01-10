@@ -1,60 +1,77 @@
-<svg width="600" height="220" viewBox="0 0 600 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="650" height="260" viewBox="0 0 650 260" fill="none" xmlns="http://www.w3.org/2000/svg">
   <style>
-    /* iMessage Gray Style */
-    .text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; fill: #000000; font-size: 16px; }
-    .bold { font-weight: 600; }
-    .bubble-gray { fill: #e5e5ea; }
-    .dot { fill: #8e8e93; animation: pulse 1s infinite; }
+    /* 1. EXACT FONTS & COLORS */
+    /* Uses system font stack for that "authentic" crisp look */
+    .text { 
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; 
+      fill: #24292f; /* GitHub's official text color, not black */
+      font-size: 16px; 
+      line-height: 1.5;
+    }
+    .bold { font-weight: 600; fill: #24292f; }
+    
+    /* Jason's Bubble Style: Light Grey with subtle border */
+    .bubble { 
+      fill: #eff3f6; 
+      stroke: #d0d7de; /* The secret sauce for the "crisp" look */
+      stroke-width: 1px;
+    }
+    
+    /* 2. LOADING DOTS STYLE */
+    .dot { fill: #57606a; animation: pulse 1s infinite; }
 
-    /* ANIMATION TIMING (Slower) */
-    /* Dots: 0s -> 1.5s */
+    /* 3. ANIMATION TIMING (Natural Reading Speed) */
+    /* Dots vanish at 1.5s */
     .dots-layer { animation: fadeOut 0.3s ease forwards 1.5s; }
-
-    /* Messages: Start AFTER dots vanish */
-    /* Msg 1: Appears at 2.0s */
-    .msg-1 { opacity: 0; animation: fadeInUp 0.5s ease forwards 2.0s; }
-    /* Msg 2: Appears at 3.5s (1.5s delay) */
-    .msg-2 { opacity: 0; animation: fadeInUp 0.5s ease forwards 3.5s; }
-    /* Msg 3: Appears at 5.0s (1.5s delay) */
-    .msg-3 { opacity: 0; animation: fadeInUp 0.5s ease forwards 5.0s; }
+    
+    /* Msg 1: "I'm Ankit..." (Appears at 1.8s) */
+    .msg-1 { opacity: 0; animation: fadeInUp 0.4s ease forwards 1.8s; }
+    
+    /* Msg 2: "Weather..." (Appears at 3.5s) */
+    .msg-2 { opacity: 0; animation: fadeInUp 0.4s ease forwards 3.5s; }
+    
+    /* Msg 3: "AI Agents..." (Appears at 5.5s) */
+    .msg-3 { opacity: 0; animation: fadeInUp 0.4s ease forwards 5.5s; }
 
     @keyframes pulse { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
     @keyframes fadeOut { to { opacity: 0; } }
-    @keyframes fadeInUp { 
-      from { opacity: 0; transform: translateY(10px); } 
-      to { opacity: 1; transform: translateY(0); } 
-    }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     .dot:nth-child(2) { animation-delay: 0.2s; }
     .dot:nth-child(3) { animation-delay: 0.4s; }
   </style>
 
   <g transform="translate(20, 20)">
     <g class="dots-layer">
-      <rect width="70" height="36" rx="18" class="bubble-gray"/>
-      <circle cx="20" cy="18" r="4" class="dot"/>
-      <circle cx="32" cy="18" r="4" class="dot"/>
-      <circle cx="44" cy="18" r="4" class="dot"/>
+      <rect width="70" height="40" rx="20" class="bubble"/>
+      <circle cx="20" cy="20" r="4" class="dot"/>
+      <circle cx="32" cy="20" r="4" class="dot"/>
+      <circle cx="44" cy="20" r="4" class="dot"/>
     </g>
   </g>
 
   <g transform="translate(20, 20)">
     <g class="msg-1">
-      <rect width="160" height="36" rx="18" class="bubble-gray"/>
-      <text x="18" y="23" class="text">Hi, I'm <tspan class="bold">Ankit</tspan>.</text>
+      <rect width="210" height="40" rx="20" class="bubble"/>
+      <text x="20" y="26" class="text">Hi, I'm <tspan class="bold">Ankit, 22, Engineer</tspan>.</text>
     </g>
   </g>
 
-  <g transform="translate(20, 70)">
+  <g transform="translate(20, 75)">
     <g class="msg-2">
-      <rect width="290" height="36" rx="18" class="bubble-gray"/>
-      <text x="18" y="23" class="text">I live in Delhi, where it's supposed to be</text>
+      <rect width="520" height="40" rx="20" class="bubble"/>
+      <text x="20" y="26" class="text">
+        I live in Delhi, where it's <tspan class="bold">{{TEMP}}°C</tspan> and <tspan class="bold">{{CONDITION}}</tspan> today.
+      </text>
     </g>
   </g>
 
-  <g transform="translate(20, 120)">
+  <g transform="translate(20, 130)">
     <g class="msg-3">
-      <rect width="310" height="36" rx="18" class="bubble-gray"/>
-      <text x="18" y="23" class="text"><tspan class="bold">{{TEMP}}°C</tspan> and <tspan class="bold">{{CONDITION}}</tspan> today.</text>
+      <rect width="580" height="70" rx="20" class="bubble"/>
+      <text x="20" y="26" class="text">
+        <tspan x="20" dy="0">I love building full-stack apps and AI agents that</tspan>
+        <tspan x="20" dy="24">actually get stuff done and can scale.</tspan>
+      </text>
     </g>
   </g>
 </svg>
