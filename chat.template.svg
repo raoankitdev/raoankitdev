@@ -1,6 +1,21 @@
-<svg width="200" height="50" xmlns="http://www.w3.org/2000/svg">
-  <rect width="100%" height="100%" rx="10" fill="#24292e"/>
-  <text x="20" y="30" font-family="Arial" font-size="14" fill="white">
-    Current Temp: {{TEMP}}°C
-  </text>
+<svg width="250" height="70" viewBox="0 0 250 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; fill: white; font-weight: 600; }
+    .temp { font-size: 20px; }
+    .city { font-size: 12px; opacity: 0.7; }
+    
+    /* This makes it smooth like Jason's */
+    @keyframes pulse {
+      0% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.8; transform: scale(1.02); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+    .container { animation: pulse 3s ease-in-out infinite; transform-origin: center; }
+  </style>
+
+  <g class="container">
+    <rect width="250" height="70" rx="15" fill="#24292e"/>
+    <text x="20" y="35" class="text temp">Delhi: {{TEMP}}°C</text>
+    <text x="20" y="55" class="text city">{{CONDITION}}</text>
+  </g>
 </svg>
