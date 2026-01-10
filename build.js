@@ -20,20 +20,24 @@ async function updateWeather() {
     const options = { timeZone: 'Asia/Kolkata', hour: 'numeric', hour12: false };
     const hour = parseInt(date.toLocaleString('en-US', options));
     
-    let greeting = "Have a good day!";
+    let greeting = "Have a good night! 🌙";
     if (hour >= 5 && hour < 12) greeting = "Have a good morning! ☀️";
     else if (hour >= 12 && hour < 17) greeting = "Have a good afternoon! 🌤️";
     else if (hour >= 17 && hour < 21) greeting = "Have a good evening! 🌇";
-    else greeting = "Have a good night! 🌙";
 
-    // 3. Embed Image (Base64 Injection)
+    // 3. Embed Image (With Safety Check)
     let imageBase64 = "";
     if (fs.existsSync('project.jpg')) {
+      const stats = fs.statSync('project.jpg');
+      // If image is > 500KB, it might break the SVG. Warn the user.
+      if (stats.size > 500000) { 
+        console.warn("WARNING: project.jpg is too big! It might not load.");
+      }
       const imgBuffer = fs.readFileSync('project.jpg');
-      // Convert image to a string so it can live inside the SVG
       imageBase64 = `data:image/jpeg;base64,${imgBuffer.toString('base64')}`;
+      console.log("Image found and embedded.");
     } else {
-      console.warn("Warning: project.jpg not found. Bubble will be empty.");
+      console.warn("WARNING: project.jpg not found. Image bubble will be blank.");
     }
 
     // 4. Update File
