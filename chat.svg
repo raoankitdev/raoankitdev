@@ -1,22 +1,40 @@
 <svg width="650" height="260" viewBox="0 0 650 260" fill="none" xmlns="http://www.w3.org/2000/svg">
   <style>
-    /* AUTHENTIC GITHUB/JASON STYLE */
-    .text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; fill: #24292f; font-size: 16px; line-height: 1.5; }
+    /* 1. VISUALS (Authentic Jason Long Style) */
+    .text { 
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; 
+      fill: #24292f; 
+      font-size: 16px; 
+      line-height: 1.5;
+    }
     .bold { font-weight: 600; fill: #24292f; }
     
-    /* Light Grey Bubble with Crisp Border */
-    .bubble { fill: #eff3f6; stroke: #d0d7de; stroke-width: 1px; }
-    .dot { fill: #57606a; animation: pulse 1s infinite; }
+    .bubble { 
+      fill: #eff3f6; /* Light Grey */
+      stroke: #d0d7de; /* Subtle Border */
+      stroke-width: 1px;
+    }
+    .dot { fill: #57606a; }
 
-    /* ANIMATION */
-    .dots-layer { animation: fadeOut 0.3s ease forwards 1.5s; }
-    .msg-1 { opacity: 0; animation: fadeInUp 0.4s ease forwards 1.8s; }
-    .msg-2 { opacity: 0; animation: fadeInUp 0.4s ease forwards 3.5s; }
-    .msg-3 { opacity: 0; animation: fadeInUp 0.4s ease forwards 5.5s; }
+    /* 2. ANIMATION (Fail-Safe) */
+    /* We use 'backwards' fill-mode so it doesn't start invisible if animation fails */
+    
+    /* Loading Dots: Pulse then vanish */
+    .dots-layer { animation: fadeOut 0.5s ease forwards 1.0s; }
+    
+    /* Messages: Slide Up */
+    .msg-1 { animation: slideUp 0.5s ease backwards 1.2s; }
+    .msg-2 { animation: slideUp 0.5s ease backwards 2.5s; }
+    .msg-3 { animation: slideUp 0.5s ease backwards 4.0s; }
 
     @keyframes pulse { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
     @keyframes fadeOut { to { opacity: 0; } }
-    @keyframes fadeInUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes slideUp { 
+      from { opacity: 0; transform: translateY(10px); } 
+      to { opacity: 1; transform: translateY(0); } 
+    }
+    
+    .dot { animation: pulse 1s infinite; }
     .dot:nth-child(2) { animation-delay: 0.2s; }
     .dot:nth-child(3) { animation-delay: 0.4s; }
   </style>
@@ -30,12 +48,12 @@
 
   <g transform="translate(20, 20)"><g class="msg-1">
     <rect width="230" height="40" rx="20" class="bubble"/>
-    <text x="20" y="26" class="text">Hi, I'm <tspan>Ankit, 22, Engineer</tspan>.</text>
+    <text x="20" y="26" class="text">Hi, I'm <tspan class="bold">Ankit, 22, Engineer</tspan>.</text>
   </g></g>
 
   <g transform="translate(20, 75)"><g class="msg-2">
     <rect width="520" height="40" rx="20" class="bubble"/>
-    <text x="20" y="26" class="text">I live in Delhi, where it's <tspan>15°C</tspan> and <tspan>☁️ haze</tspan> today.</text>
+    <text x="20" y="26" class="text">I live in Delhi, where it's <tspan class="bold">15°C</tspan> and <tspan class="bold">☁️ haze</tspan> today.</text>
   </g></g>
 
   <g transform="translate(20, 130)"><g class="msg-3">
