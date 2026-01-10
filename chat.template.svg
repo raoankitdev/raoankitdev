@@ -1,6 +1,6 @@
 <svg width="650" height="850" viewBox="0 0 650 850" fill="none" xmlns="http://www.w3.org/2000/svg">
   <style>
-    /* 1. TEXT & SHAPE STYLES */
+    /* 1. BASE STYLES */
     .text { 
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
       fill: #24292f; 
@@ -12,68 +12,70 @@
     .link { fill: #0969da; text-decoration: none; }
     .link:hover { text-decoration: underline; }
 
-    /* 2. ANIMATION TIMELINE (The Realism Engine) */
-    
-    /* Dots Pulse Animation */
-    @keyframes pulse { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
+    /* 2. INITIAL STATES (Crucial to prevent glitches) */
+    .layer-dots { opacity: 0; }
+    .layer-msg  { opacity: 0; }
 
-    /* Typing Bubbles: Appear -> Wait -> Vanish */
-    @keyframes typing { 
+    /* 3. ANIMATION KEYFRAMES */
+    @keyframes pulse { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
+    
+    /* Dots: Fade In -> Wait -> Fade Out */
+    @keyframes showDots { 
       0% { opacity: 0; } 
       10% { opacity: 1; } 
       90% { opacity: 1; } 
       100% { opacity: 0; } 
     }
     
-    /* Messages: Slide Up and Stay */
-    @keyframes slideUp { 
+    /* Message: Slide Up & Stay Visible */
+    @keyframes showMsg { 
       0% { opacity: 0; transform: translateY(10px); } 
       100% { opacity: 1; transform: translateY(0); } 
     }
 
-    /* 3. SEQUENCE DELAYS */
+    /* 4. THE TIMELINE (Sequential Delays) */
     
-    /* Step 1: Bio */
-    .dots-1 { animation: typing 1.0s ease forwards 0s; }   /* 0s - 1.0s */
-    .msg-1  { animation: slideUp 0.5s ease both 1.1s; }    /* Appears 1.1s */
+    /* MSG 1: Bio */
+    .d1 { animation: showDots 1.0s ease forwards 0.0s; }
+    .m1 { animation: showMsg  0.5s ease forwards 1.0s; }
 
-    /* Step 2: Weather */
-    .dots-2 { animation: typing 1.2s ease both 1.3s; }     /* 1.3s - 2.5s */
-    .msg-2  { animation: slideUp 0.5s ease both 2.6s; }    /* Appears 2.6s */
+    /* MSG 2: Weather */
+    .d2 { animation: showDots 1.0s ease forwards 1.5s; }
+    .m2 { animation: showMsg  0.5s ease forwards 2.5s; }
 
-    /* Step 3: Full Stack */
-    .dots-3 { animation: typing 1.2s ease both 2.8s; }     /* 2.8s - 4.0s */
-    .msg-3  { animation: slideUp 0.5s ease both 4.1s; }    /* Appears 4.1s */
+    /* MSG 3: Full Stack */
+    .d3 { animation: showDots 1.0s ease forwards 3.0s; }
+    .m3 { animation: showMsg  0.5s ease forwards 4.0s; }
 
-    /* Step 4: Project Text */
-    .dots-4 { animation: typing 1.2s ease both 4.3s; }     /* 4.3s - 5.5s */
-    .msg-4  { animation: slideUp 0.5s ease both 5.6s; }    /* Appears 5.6s */
+    /* MSG 4: Project Text */
+    .d4 { animation: showDots 1.0s ease forwards 4.5s; }
+    .m4 { animation: showMsg  0.5s ease forwards 5.5s; }
 
-    /* Step 5: Image */
-    .dots-5 { animation: typing 1.2s ease both 5.8s; }     /* 5.8s - 7.0s */
-    .msg-5  { animation: slideUp 0.5s ease both 7.1s; }    /* Appears 7.1s */
+    /* MSG 5: Image */
+    .d5 { animation: showDots 1.0s ease forwards 6.0s; }
+    .m5 { animation: showMsg  0.5s ease forwards 7.0s; }
 
-    /* Step 6: X Link */
-    .dots-6 { animation: typing 1.2s ease both 7.3s; }     /* 7.3s - 8.5s */
-    .msg-6  { animation: slideUp 0.5s ease both 8.6s; }    /* Appears 8.6s */
+    /* MSG 6: X Link */
+    .d6 { animation: showDots 1.0s ease forwards 7.5s; }
+    .m6 { animation: showMsg  0.5s ease forwards 8.5s; }
 
-    /* Step 7: Greeting */
-    .dots-7 { animation: typing 1.2s ease both 8.8s; }     /* 8.8s - 10.0s */
-    .msg-7  { animation: slideUp 0.5s ease both 10.1s; }   /* Appears 10.1s */
+    /* MSG 7: Greeting */
+    .d7 { animation: showDots 1.0s ease forwards 9.0s; }
+    .m7 { animation: showMsg  0.5s ease forwards 10.0s; }
 
-    /* Stagger dots inside the bubble */
+    /* Internal Dot Staggering */
     .dot:nth-child(2) { animation-delay: 0.2s; }
     .dot:nth-child(3) { animation-delay: 0.4s; }
   </style>
 
   <g transform="translate(20, 20)">
-    <g class="dots-1"><rect width="80" height="44" rx="22" class="bubble"/><circle cx="24" cy="22" r="5" class="dot"/><circle cx="40" cy="22" r="5" class="dot"/><circle cx="56" cy="22" r="5" class="dot"/></g>
-    <g class="msg-1"><rect width="260" height="48" rx="24" class="bubble"/><text x="24" y="30" class="text">Hi, I'm Ankit, 22, Engineer.</text></g>
+    <g class="layer-dots d1"><rect width="80" height="44" rx="22" class="bubble"/><circle cx="24" cy="22" r="5" class="dot"/><circle cx="40" cy="22" r="5" class="dot"/><circle cx="56" cy="22" r="5" class="dot"/></g>
+    <g class="layer-msg m1"><rect width="260" height="48" rx="24" class="bubble"/><text x="24" y="30" class="text">Hi, I'm Ankit, 22, Engineer.</text></g>
   </g>
 
   <g transform="translate(20, 85)">
-    <g class="dots-2"><rect width="80" height="44" rx="22" class="bubble"/><circle cx="24" cy="22" r="5" class="dot"/><circle cx="40" cy="22" r="5" class="dot"/><circle cx="56" cy="22" r="5" class="dot"/></g>
-    <g class="msg-2">
+    <g class="layer-dots d2"><rect width="80" height="44" rx="22" class="bubble"/><circle cx="24" cy="22" r="5" class="dot"/><circle cx="40" cy="22" r="5" class="dot"/><circle cx="56" cy="22" r="5" class="dot"/></g>
+    <g class="layer-msg m2">
       <rect width="420" height="80" rx="24" class="bubble"/>
       <text x="24" y="30" class="text">
         <tspan x="24" dy="0">I live in Delhi, where it's supposed to be</tspan>
@@ -83,8 +85,8 @@
   </g>
 
   <g transform="translate(20, 185)">
-    <g class="dots-3"><rect width="80" height="44" rx="22" class="bubble"/><circle cx="24" cy="22" r="5" class="dot"/><circle cx="40" cy="22" r="5" class="dot"/><circle cx="56" cy="22" r="5" class="dot"/></g>
-    <g class="msg-3">
+    <g class="layer-dots d3"><rect width="80" height="44" rx="22" class="bubble"/><circle cx="24" cy="22" r="5" class="dot"/><circle cx="40" cy="22" r="5" class="dot"/><circle cx="56" cy="22" r="5" class="dot"/></g>
+    <g class="layer-msg m3">
       <rect width="490" height="80" rx="24" class="bubble"/>
       <text x="24" y="30" class="text">
         <tspan x="24" dy="0">I love building full-stack apps and AI agents that</tspan>
@@ -94,8 +96,8 @@
   </g>
 
   <g transform="translate(20, 285)">
-    <g class="dots-4"><rect width="80" height="44" rx="22" class="bubble"/><circle cx="24" cy="22" r="5" class="dot"/><circle cx="40" cy="22" r="5" class="dot"/><circle cx="56" cy="22" r="5" class="dot"/></g>
-    <g class="msg-4">
+    <g class="layer-dots d4"><rect width="80" height="44" rx="22" class="bubble"/><circle cx="24" cy="22" r="5" class="dot"/><circle cx="40" cy="22" r="5" class="dot"/><circle cx="56" cy="22" r="5" class="dot"/></g>
+    <g class="layer-msg m4">
       <rect width="600" height="80" rx="24" class="bubble"/>
       <text x="24" y="30" class="text">
         <tspan x="24" dy="0">My favorite project is StashMyMusic. It takes an Instagram</tspan>
@@ -105,8 +107,8 @@
   </g>
 
   <g transform="translate(20, 385)">
-    <g class="dots-5"><rect width="80" height="44" rx="22" class="bubble"/><circle cx="24" cy="22" r="5" class="dot"/><circle cx="40" cy="22" r="5" class="dot"/><circle cx="56" cy="22" r="5" class="dot"/></g>
-    <g class="msg-5">
+    <g class="layer-dots d5"><rect width="80" height="44" rx="22" class="bubble"/><circle cx="24" cy="22" r="5" class="dot"/><circle cx="40" cy="22" r="5" class="dot"/><circle cx="56" cy="22" r="5" class="dot"/></g>
+    <g class="layer-msg m5">
       <svg x="0" y="0" width="580" height="320" viewBox="0 0 580 320">
           <clipPath id="clip"><rect width="580" height="320" rx="12"/></clipPath>
           <image href="{{PROJECT_IMG}}" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" clip-path="url(#clip)"/>
@@ -115,8 +117,8 @@
   </g>
 
   <g transform="translate(20, 725)">
-    <g class="dots-6"><rect width="80" height="44" rx="22" class="bubble"/><circle cx="24" cy="22" r="5" class="dot"/><circle cx="40" cy="22" r="5" class="dot"/><circle cx="56" cy="22" r="5" class="dot"/></g>
-    <g class="msg-6">
+    <g class="layer-dots d6"><rect width="80" height="44" rx="22" class="bubble"/><circle cx="24" cy="22" r="5" class="dot"/><circle cx="40" cy="22" r="5" class="dot"/><circle cx="56" cy="22" r="5" class="dot"/></g>
+    <g class="layer-msg m6">
       <a href="https://x.com/ankit_ay07" target="_blank">
         <rect width="480" height="48" rx="24" class="bubble"/>
         <text x="24" y="30" class="text">
@@ -127,8 +129,8 @@
   </g>
 
   <g transform="translate(20, 790)">
-    <g class="dots-7"><rect width="80" height="44" rx="22" class="bubble"/><circle cx="24" cy="22" r="5" class="dot"/><circle cx="40" cy="22" r="5" class="dot"/><circle cx="56" cy="22" r="5" class="dot"/></g>
-    <g class="msg-7">
+    <g class="layer-dots d7"><rect width="80" height="44" rx="22" class="bubble"/><circle cx="24" cy="22" r="5" class="dot"/><circle cx="40" cy="22" r="5" class="dot"/><circle cx="56" cy="22" r="5" class="dot"/></g>
+    <g class="layer-msg m7">
       <rect width="320" height="48" rx="24" class="bubble"/>
       <text x="24" y="30" class="text">{{GREETING}}</text>
     </g>
