@@ -68,7 +68,7 @@
   <g transform="translate(20, 385)"><g class="msg-5">
     <svg x="0" y="0" width="580" height="320" viewBox="0 0 580 320">
         <clipPath id="clip"><rect width="580" height="320" rx="12"/></clipPath>
-        <image href="{{PROJECT_IMG}}" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip)"/>
+        <image href="{{PROJECT_IMG}}" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" clip-path="url(#clip)"/>
     </svg>
   </g></g>
 
