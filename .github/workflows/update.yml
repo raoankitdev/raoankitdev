@@ -10,14 +10,18 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
-      - name: Update Script
-        run: node build-svg.js
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - name: Run Script
+        run: node build.js
         env:
           WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
-      - name: Push Changes
+      - name: Commit & Push
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add chat.svg
-          git commit -m "Update weather animation" || exit 0
+          git commit -m "Update chat bubble" || echo "No changes"
           git push
