@@ -31,31 +31,31 @@
     
     /* MSG 1: Bio (0s start) */
     .d1 { animation: cycleDots 1.2s ease forwards 0.0s; }
-    .m1 { animation: revealMsg 0.1s ease forwards 1.6s; }
+    .m1 { animation: revealMsg 0.1s ease forwards 1.0s; }
 
     /* MSG 2: Weather (1.7s start) */
-    .d2 { animation: cycleDots 1.2s ease forwards 2.0s; }
-    .m2 { animation: revealMsg 0.1s ease forwards 3.6s; }
+    .d2 { animation: cycleDots 1.2s ease forwards 1.4s; }
+    .m2 { animation: revealMsg 0.1s ease forwards 3.1s; }
 
     /* MSG 3: Full Stack (3.4s start) */
-    .d3 { animation: cycleDots 1.2s ease forwards 4.0s; }
-    .m3 { animation: revealMsg 0.1s ease forwards 5.6s; }
+    .d3 { animation: cycleDots 1.2s ease forwards 3.5s; }
+    .m3 { animation: revealMsg 0.1s ease forwards 5.2s; }
 
     /* MSG 4: Project Text (5.1s start) */
-    .d4 { animation: cycleDots 1.2s ease forwards 6.0s; }
-    .m4 { animation: revealMsg 0.1s ease forwards 7.6s; }
+    .d4 { animation: cycleDots 1.2s ease forwards 5.6s; }
+    .m4 { animation: revealMsg 0.1s ease forwards 7.3s; }
 
     /* MSG 5: Image (6.8s start) */
     .d5 { animation: cycleDots 1.2s ease forwards 7.7s; }
-    .m5 { animation: revealMsg 0.1s ease forwards 9.3s; }
+    .m5 { animation: revealMsg 0.1s ease forwards 9.4s; }
 
     /* MSG 6: X Link (8.5s start) */
-    .d6 { animation: cycleDots 1.2s ease forwards 9.7s; }
-    .m6 { animation: revealMsg 0.1s ease forwards 11.3s; }
+    .d6 { animation: cycleDots 1.2s ease forwards 9.8s; }
+    .m6 { animation: revealMsg 0.1s ease forwards 11.1s; }
 
     /* MSG 7: Greeting (10.2s start) */
-    .d7 { animation: cycleDots 1.2s ease forwards 11.7s; }
-    .m7 { animation: revealMsg 0.1s ease forwards 13.3s; }
+    .d7 { animation: cycleDots 1.2s ease forwards 11.5s; }
+    .m7 { animation: revealMsg 0.1s ease forwards 13.1s; }
 
     .dot:nth-child(2) { animation-delay: 0.2s; }
     .dot:nth-child(3) { animation-delay: 0.4s; }
