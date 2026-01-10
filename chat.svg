@@ -1,36 +1,33 @@
 <svg width="650" height="260" viewBox="0 0 650 260" fill="none" xmlns="http://www.w3.org/2000/svg">
   <style>
-    /* 1. EXACT FONTS & COLORS */
-    /* Uses system font stack for that "authentic" crisp look */
+    /* 1. AUTHENTIC FONTS & COLORS */
     .text { 
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; 
-      fill: #24292f; /* GitHub's official text color, not black */
+      fill: #24292f; /* GitHub Black */
       font-size: 16px; 
       line-height: 1.5;
     }
     .bold { font-weight: 600; fill: #24292f; }
     
-    /* Jason's Bubble Style: Light Grey with subtle border */
+    /* Jason's Bubble: Light Grey with Border */
     .bubble { 
       fill: #eff3f6; 
-      stroke: #d0d7de; /* The secret sauce for the "crisp" look */
+      stroke: #d0d7de; 
       stroke-width: 1px;
     }
-    
-    /* 2. LOADING DOTS STYLE */
     .dot { fill: #57606a; animation: pulse 1s infinite; }
 
-    /* 3. ANIMATION TIMING (Natural Reading Speed) */
+    /* 2. ANIMATION TIMING */
     /* Dots vanish at 1.5s */
     .dots-layer { animation: fadeOut 0.3s ease forwards 1.5s; }
     
-    /* Msg 1: "I'm Ankit..." (Appears at 1.8s) */
+    /* Msg 1: Bio (Appears at 1.8s) */
     .msg-1 { opacity: 0; animation: fadeInUp 0.4s ease forwards 1.8s; }
     
-    /* Msg 2: "Weather..." (Appears at 3.5s) */
+    /* Msg 2: Weather (Appears at 3.5s) */
     .msg-2 { opacity: 0; animation: fadeInUp 0.4s ease forwards 3.5s; }
     
-    /* Msg 3: "AI Agents..." (Appears at 5.5s) */
+    /* Msg 3: AI Agents (Appears at 5.5s) */
     .msg-3 { opacity: 0; animation: fadeInUp 0.4s ease forwards 5.5s; }
 
     @keyframes pulse { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
@@ -51,7 +48,7 @@
 
   <g transform="translate(20, 20)">
     <g class="msg-1">
-      <rect width="210" height="40" rx="20" class="bubble"/>
+      <rect width="230" height="40" rx="20" class="bubble"/>
       <text x="20" y="26" class="text">Hi, I'm <tspan class="bold">Ankit, 22, Engineer</tspan>.</text>
     </g>
   </g>
