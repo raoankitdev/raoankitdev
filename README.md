@@ -1,1 +1,1 @@
-[![Weather](https://raw.githubusercontent.com/raoankitdev/raoankitdev/main/chat.svg?v=authentic_fixed)](https://github.com/raoankitdev)
+[![Weather](https://raw.githubusercontent.com/raoankitdev/raoankitdev/main/chat.svg?v=a)](https://github.com/raoankitdev)
