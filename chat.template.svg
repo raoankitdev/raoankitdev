@@ -1,76 +1,32 @@
 <svg width="650" height="600" viewBox="0 0 650 600" fill="none" xmlns="http://www.w3.org/2000/svg">
   <style>
-    /* AUTHENTIC JASON LONG STYLE */
-    .text { 
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; 
-      fill: #24292f; 
-      font-size: 16px; 
-      line-height: 1.5;
-    }
+    /* STYLE */
+    .text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; fill: #24292f; font-size: 16px; line-height: 1.5; }
     .bold { font-weight: 600; fill: #24292f; }
-    
-    .bubble { 
-      fill: #eff3f6; /* Light Grey */
-      stroke: #d0d7de; /* Subtle Border */
-      stroke-width: 1px;
-    }
+    .bubble { fill: #eff3f6; stroke: #d0d7de; stroke-width: 1px; }
     .dot { fill: #57606a; }
 
-    /* ANIMATION SEQUENCE (Natural Reading Speed) */
-    /* Dots vanish at 1.0s */
+    /* ANIMATION */
     .dots-layer { animation: fadeOut 0.5s ease forwards 1.0s; }
-    
-    /* Message 1: Bio (1.2s) */
     .msg-1 { animation: slideUp 0.5s ease backwards 1.2s; }
-    
-    /* Message 2: Weather (2.5s) */
     .msg-2 { animation: slideUp 0.5s ease backwards 2.5s; }
-    
-    /* Message 3: Project Text (4.0s) */
     .msg-3 { animation: slideUp 0.5s ease backwards 4.0s; }
-    
-    /* Message 4: Project Image (5.5s) */
     .msg-4 { animation: slideUp 0.5s ease backwards 5.5s; }
-    
-    /* Message 5: Greeting (7.0s) */
     .msg-5 { animation: slideUp 0.5s ease backwards 7.0s; }
 
     @keyframes pulse { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
     @keyframes fadeOut { to { opacity: 0; } }
-    @keyframes slideUp { 
-      from { opacity: 0; transform: translateY(10px); } 
-      to { opacity: 1; transform: translateY(0); } 
-    }
-    
-    .dot { animation: pulse 1s infinite; }
-    .dot:nth-child(2) { animation-delay: 0.2s; }
-    .dot:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes slideUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .dot { animation: pulse 1s infinite; .dot:nth-child(2) { animation-delay: 0.2s; } .dot:nth-child(3) { animation-delay: 0.4s; } }
   </style>
 
-  <g transform="translate(20, 20)"><g class="dots-layer">
-    <rect width="70" height="40" rx="20" class="bubble"/>
-    <circle cx="20" cy="20" r="4" class="dot"/>
-    <circle cx="32" cy="20" r="4" class="dot"/>
-    <circle cx="44" cy="20" r="4" class="dot"/>
-  </g></g>
+  <g transform="translate(20, 20)"><g class="dots-layer"><rect width="70" height="40" rx="20" class="bubble"/><circle cx="20" cy="20" r="4" class="dot"/><circle cx="32" cy="20" r="4" class="dot"/><circle cx="44" cy="20" r="4" class="dot"/></g></g>
 
-  <g transform="translate(20, 20)"><g class="msg-1">
-    <rect width="230" height="40" rx="20" class="bubble"/>
-    <text x="20" y="26" class="text">Hi, I'm <tspan class="bold">Ankit, 22, Engineer</tspan>.</text>
-  </g></g>
+  <g transform="translate(20, 20)"><g class="msg-1"><rect width="230" height="40" rx="20" class="bubble"/><text x="20" y="26" class="text">Hi, I'm <tspan class="bold">Ankit, 22, Engineer</tspan>.</text></g></g>
 
-  <g transform="translate(20, 75)"><g class="msg-2">
-    <rect width="520" height="40" rx="20" class="bubble"/>
-    <text x="20" y="26" class="text">I live in Delhi, where it's <tspan class="bold">{{TEMP}}°C</tspan> and <tspan class="bold">{{CONDITION}}</tspan> today.</text>
-  </g></g>
+  <g transform="translate(20, 75)"><g class="msg-2"><rect width="520" height="40" rx="20" class="bubble"/><text x="20" y="26" class="text">I live in Delhi, where it's <tspan class="bold">{{TEMP}}°C</tspan> and <tspan class="bold">{{CONDITION}}</tspan> today.</text></g></g>
 
-  <g transform="translate(20, 130)"><g class="msg-3">
-    <rect width="600" height="70" rx="20" class="bubble"/>
-    <text x="20" y="26" class="text">
-      <tspan x="20" dy="0">My favorite project is <tspan class="bold">StashMyMusic</tspan>. It takes an Instagram</tspan>
-      <tspan x="20" dy="24">reel link and adds the song automatically to Spotify.</tspan>
-    </text>
-  </g></g>
+  <g transform="translate(20, 130)"><g class="msg-3"><rect width="600" height="70" rx="20" class="bubble"/><text x="20" y="26" class="text"><tspan x="20" dy="0">My favorite project is <tspan class="bold">StashMyMusic</tspan>. It takes an Instagram</tspan><tspan x="20" dy="24">reel link and adds the song automatically to Spotify.</tspan></text></g></g>
 
   <g transform="translate(20, 215)"><g class="msg-4">
     <rect width="500" height="280" rx="20" class="bubble"/>
@@ -80,8 +36,5 @@
     </svg>
   </g></g>
 
-  <g transform="translate(20, 510)"><g class="msg-5">
-    <rect width="320" height="40" rx="20" class="bubble"/>
-    <text x="20" y="26" class="text"><tspan class="bold">{{GREETING}}</tspan></text>
-  </g></g>
+  <g transform="translate(20, 510)"><g class="msg-5"><rect width="320" height="40" rx="20" class="bubble"/><text x="20" y="26" class="text"><tspan class="bold">{{GREETING}}</tspan></text></g></g>
 </svg>
