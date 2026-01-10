@@ -1,6 +1,6 @@
-<svg width="650" height="260" viewBox="0 0 650 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="650" height="600" viewBox="0 0 650 600" fill="none" xmlns="http://www.w3.org/2000/svg">
   <style>
-    /* 1. VISUALS (Authentic Jason Long Style) */
+    /* AUTHENTIC JASON LONG STYLE */
     .text { 
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; 
       fill: #24292f; 
@@ -16,16 +16,24 @@
     }
     .dot { fill: #57606a; }
 
-    /* 2. ANIMATION (Fail-Safe) */
-    /* We use 'backwards' fill-mode so it doesn't start invisible if animation fails */
-    
-    /* Loading Dots: Pulse then vanish */
+    /* ANIMATION SEQUENCE (Natural Reading Speed) */
+    /* Dots vanish at 1.0s */
     .dots-layer { animation: fadeOut 0.5s ease forwards 1.0s; }
     
-    /* Messages: Slide Up */
+    /* Message 1: Bio (1.2s) */
     .msg-1 { animation: slideUp 0.5s ease backwards 1.2s; }
+    
+    /* Message 2: Weather (2.5s) */
     .msg-2 { animation: slideUp 0.5s ease backwards 2.5s; }
+    
+    /* Message 3: Project Text (4.0s) */
     .msg-3 { animation: slideUp 0.5s ease backwards 4.0s; }
+    
+    /* Message 4: Project Image (5.5s) */
+    .msg-4 { animation: slideUp 0.5s ease backwards 5.5s; }
+    
+    /* Message 5: Greeting (7.0s) */
+    .msg-5 { animation: slideUp 0.5s ease backwards 7.0s; }
 
     @keyframes pulse { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
     @keyframes fadeOut { to { opacity: 0; } }
@@ -57,10 +65,23 @@
   </g></g>
 
   <g transform="translate(20, 130)"><g class="msg-3">
-    <rect width="580" height="70" rx="20" class="bubble"/>
+    <rect width="600" height="70" rx="20" class="bubble"/>
     <text x="20" y="26" class="text">
-      <tspan x="20" dy="0">I love building full-stack apps and AI agents that</tspan>
-      <tspan x="20" dy="24">actually get stuff done and can scale.</tspan>
+      <tspan x="20" dy="0">My favorite project is <tspan class="bold">StashMyMusic</tspan>. It takes an Instagram</tspan>
+      <tspan x="20" dy="24">reel link and adds the song automatically to Spotify.</tspan>
     </text>
+  </g></g>
+
+  <g transform="translate(20, 215)"><g class="msg-4">
+    <rect width="500" height="280" rx="20" class="bubble"/>
+    <svg x="10" y="10" width="480" height="260" viewBox="0 0 480 260">
+        <clipPath id="clip"><rect width="480" height="260" rx="10"/></clipPath>
+        <image href="{{PROJECT_IMG}}" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" clip-path="url(#clip)"/>
+    </svg>
+  </g></g>
+
+  <g transform="translate(20, 510)"><g class="msg-5">
+    <rect width="320" height="40" rx="20" class="bubble"/>
+    <text x="20" y="26" class="text"><tspan class="bold">{{GREETING}}</tspan></text>
   </g></g>
 </svg>
