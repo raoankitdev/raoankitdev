@@ -72,7 +72,7 @@
       <rect width="420" height="80" rx="24" class="bubble"/>
       <text x="24" y="30" class="text">
         <tspan x="24" dy="0">I live in Delhi, where it's supposed to be</tspan>
-        <tspan x="24" dy="28">9°C and ☁️ fog today.</tspan>
+        <tspan x="24" dy="28">10°C and ☁️ fog today.</tspan>
       </text>
     </g>
   </g>
@@ -125,7 +125,7 @@
     <g class="d7" opacity="0"><rect width="80" height="44" rx="22" class="bubble"/><circle cx="24" cy="22" r="5" class="dot"/><circle cx="40" cy="22" r="5" class="dot"/><circle cx="56" cy="22" r="5" class="dot"/></g>
     <g class="m7" opacity="0">
       <rect width="320" height="48" rx="24" class="bubble"/>
-      <text x="24" y="30" class="text">Have a good night! 🌙</text>
+      <text x="24" y="30" class="text">Have a good morning! ☀️</text>
     </g>
   </g>
 </svg>
