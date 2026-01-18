@@ -72,7 +72,7 @@
       <rect width="420" height="80" rx="24" class="bubble"/>
       <text x="24" y="30" class="text">
         <tspan x="24" dy="0">I live in Delhi, where it's supposed to be</tspan>
-        <tspan x="24" dy="28">19°C and ☁️ haze today.</tspan>
+        <tspan x="24" dy="28">17°C and ☁️ haze today.</tspan>
       </text>
     </g>
   </g>
