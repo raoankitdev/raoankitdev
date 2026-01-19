@@ -1,4 +1,4 @@
-<svg width="650" height="850" viewBox="0 0 650 850" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="650" height="360" viewBox="0 0 650 360" fill="none" xmlns="http://www.w3.org/2000/svg">
   <style>
     /* 1. BASE STYLES */
     .text { 
@@ -11,7 +11,6 @@
     .dot { fill: #57606a; animation: pulse 1s infinite; }
     .link { fill: #0969da; text-decoration: none; }
     .link:hover { text-decoration: underline; }
-
     /* 2. ANIMATIONS */
     @keyframes pulse { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
     
@@ -26,46 +25,27 @@
       0% { opacity: 0; } 
       100% { opacity: 1; } 
     }
-
-    /* 3. THE BALANCED TIMELINE (1.7s Gap) */
+    /* 3. THE FAST PACED TIMELINE (0.8s Gap approx) */
     
     /* MSG 1: Bio (0s start) */
-    .d1 { animation: cycleDots 1.2s ease forwards 0.0s; }
-    .m1 { animation: revealMsg 0.1s ease forwards 1.0s; }
-
-    /* MSG 2: Weather (1.7s start) */
-    .d2 { animation: cycleDots 1.2s ease forwards 1.5s; }
-    .m2 { animation: revealMsg 0.1s ease forwards 2.6s; }
-
-    /* MSG 3: Full Stack (3.4s start) */
-    .d3 { animation: cycleDots 1.2s ease forwards 3.0s; }
-    .m3 { animation: revealMsg 0.1s ease forwards 4.1s; }
-
-    /* MSG 4: Project Text (5.1s start) */
-    .d4 { animation: cycleDots 1.2s ease forwards 4.5s; }
-    .m4 { animation: revealMsg 0.1s ease forwards 5.6s; }
-
-    /* MSG 5: Image (6.8s start) */
-    .d5 { animation: cycleDots 1.2s ease forwards 6.0s; }
-    .m5 { animation: revealMsg 0.1s ease forwards 7.1s; }
-
-    /* MSG 6: X Link (8.5s start) */
-    .d6 { animation: cycleDots 1.2s ease forwards 7.5s; }
-    .m6 { animation: revealMsg 0.1s ease forwards 8.6s; }
-
-    /* MSG 7: Greeting (10.2s start) */
-    .d7 { animation: cycleDots 1.2s ease forwards 9.0s; }
-    .m7 { animation: revealMsg 0.1s ease forwards 10.0s; }
-
+    .d1 { animation: cycleDots 0.8s ease forwards 0.0s; }
+    .m1 { animation: revealMsg 0.1s ease forwards 0.6s; }
+    /* MSG 2: Weather (0.8s start) */
+    .d2 { animation: cycleDots 0.8s ease forwards 0.8s; }
+    .m2 { animation: revealMsg 0.1s ease forwards 1.4s; }
+    /* MSG 3: Full Stack (1.6s start) */
+    .d3 { animation: cycleDots 0.8s ease forwards 1.6s; }
+    .m3 { animation: revealMsg 0.1s ease forwards 2.2s; }
+    /* MSG 6: X Link + Greeting (2.4s start) */
+    .d6 { animation: cycleDots 0.8s ease forwards 2.4s; }
+    .m6 { animation: revealMsg 0.1s ease forwards 3.0s; }
     .dot:nth-child(2) { animation-delay: 0.2s; }
     .dot:nth-child(3) { animation-delay: 0.4s; }
   </style>
-
   <g transform="translate(20, 20)">
     <g class="d1" opacity="0"><rect width="80" height="44" rx="22" class="bubble"/><circle cx="24" cy="22" r="5" class="dot"/><circle cx="40" cy="22" r="5" class="dot"/><circle cx="56" cy="22" r="5" class="dot"/></g>
     <g class="m1" opacity="0"><rect width="260" height="48" rx="24" class="bubble"/><text x="24" y="30" class="text">Hi, I'm Ankit, 22, Engineer.</text></g>
   </g>
-
   <g transform="translate(20, 85)">
     <g class="d2" opacity="0"><rect width="80" height="44" rx="22" class="bubble"/><circle cx="24" cy="22" r="5" class="dot"/><circle cx="40" cy="22" r="5" class="dot"/><circle cx="56" cy="22" r="5" class="dot"/></g>
     <g class="m2" opacity="0">
@@ -76,7 +56,6 @@
       </text>
     </g>
   </g>
-
   <g transform="translate(20, 185)">
     <g class="d3" opacity="0"><rect width="80" height="44" rx="22" class="bubble"/><circle cx="24" cy="22" r="5" class="dot"/><circle cx="40" cy="22" r="5" class="dot"/><circle cx="56" cy="22" r="5" class="dot"/></g>
     <g class="m3" opacity="0">
@@ -87,45 +66,15 @@
       </text>
     </g>
   </g>
-
   <g transform="translate(20, 285)">
-    <g class="d4" opacity="0"><rect width="80" height="44" rx="22" class="bubble"/><circle cx="24" cy="22" r="5" class="dot"/><circle cx="40" cy="22" r="5" class="dot"/><circle cx="56" cy="22" r="5" class="dot"/></g>
-    <g class="m4" opacity="0">
-      <rect width="600" height="80" rx="24" class="bubble"/>
-      <text x="24" y="30" class="text">
-        <tspan x="24" dy="0">My favorite project is StashMyMusic. It takes an Instagram</tspan>
-        <tspan x="24" dy="28">reel link and adds the song to Spotify. Below is the demonstration:</tspan>
-      </text>
-    </g>
-  </g>
-
-  <g transform="translate(20, 385)">
-    <g class="d5" opacity="0"><rect width="80" height="44" rx="22" class="bubble"/><circle cx="24" cy="22" r="5" class="dot"/><circle cx="40" cy="22" r="5" class="dot"/><circle cx="56" cy="22" r="5" class="dot"/></g>
-    <g class="m5" opacity="0">
-      <svg x="0" y="0" width="580" height="320" viewBox="0 0 580 320">
-          <clipPath id="clip"><rect width="580" height="320" rx="12"/></clipPath>
-          <image href="{{PROJECT_IMG}}" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" clip-path="url(#clip)"/>
-      </svg>
-    </g>
-  </g>
-
-  <g transform="translate(20, 725)">
     <g class="d6" opacity="0"><rect width="80" height="44" rx="22" class="bubble"/><circle cx="24" cy="22" r="5" class="dot"/><circle cx="40" cy="22" r="5" class="dot"/><circle cx="56" cy="22" r="5" class="dot"/></g>
     <g class="m6" opacity="0">
       <a href="https://x.com/ankit_ay07" target="_blank">
-        <rect width="480" height="48" rx="24" class="bubble"/>
+        <rect width="600" height="48" rx="24" class="bubble"/>
         <text x="24" y="30" class="text">
-          connect with me on x: <tspan class="link">https://x.com/ankit_ay07</tspan>
+          connect with me on x: <tspan class="link">https://x.com/ankit_ay07</tspan> {{GREETING}}
         </text>
       </a>
-    </g>
-  </g>
-
-  <g transform="translate(20, 790)">
-    <g class="d7" opacity="0"><rect width="80" height="44" rx="22" class="bubble"/><circle cx="24" cy="22" r="5" class="dot"/><circle cx="40" cy="22" r="5" class="dot"/><circle cx="56" cy="22" r="5" class="dot"/></g>
-    <g class="m7" opacity="0">
-      <rect width="320" height="48" rx="24" class="bubble"/>
-      <text x="24" y="30" class="text">{{GREETING}}</text>
     </g>
   </g>
 </svg>
